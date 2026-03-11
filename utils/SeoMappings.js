@@ -1,48 +1,70 @@
-// utils/schoolSeoMappings.js
-// Maps URL slugs to SEO page keys from schoolPageSEO
+// utils/SeoMappings.js
+// Maps URL path slugs → schoolPageSEO keys (from utils/SeoConfig.js).
+// The useSEO hook strips leading/trailing slashes, then looks up:
+//   1. Full path  (e.g. "academics/middle")
+//   2. First segment only (e.g. "academics")
+//   3. Falls back to "home"
+
 export const schoolSlugToSeoKeyMap = {
-  // About section
-  "aboutchmes": "aboutchmes",
-  "about": "about",
-  "infrastructure": "infrastructure",
-  "faculty": "faculty",
-  "teachers": "teachers",
-  
-  // Academics section
-  "curriculum": "curriculum",
-  "pre-primary": "pre-primary",
-  "primary": "primary",
-  "secondary": "secondary",
-  "holidays": "holidays",
-  "co-curricular": "co-curricular",
-  
-  // Admissions section
-  "admissionprocess": "admissionprocess",
-  "guidelines": "guidelines",
-  "enquiry": "enquiry",
-  "admissionform": "admissionform",
-  
-  // Info Center section
-  "cbse-affiliation": "cbse-affiliation",
-  "circulars": "circulars",
-  "studentscouncil": "studentscouncil",
-  "academiccalendar": "academiccalendar",
-  "disclosure": "disclosure",
-  
-  // Gallery section
-  "images": "images",
-  "videos": "videos",
-  "sportsimages": "sportsimages",
-  
-  // Contact section
-  "contact": "contact",
-  
-  // Quick Links
-  "careers": "careers",
-  "blog": "blog",
-  "alumni": "alumni",
-  
-  // Special cases
-  "": "home",
-  "/": "home"
+  // ── Home ──────────────────────────────────────────────────────────
+  "":                                          "home",
+  "/":                                         "home",
+
+  // ── About ─────────────────────────────────────────────────────────
+  "about":                                     "about",
+  "aboutchmes":                                "aboutchmes",
+  "infrastructure":                            "infrastructure",
+  "faculty":                                   "faculty",
+  "management":                                "management",
+  "teachers":                                  "teachers",
+
+  // ── Academics ─────────────────────────────────────────────────────
+  "curriculum":                                "curriculum",
+  "pre-primary":                               "pre-primary",
+  "primary":                                   "primary",
+  "secondary":                                 "secondary",
+  "academics/middle":                          "academics-middle",
+  "academics/result":                          "academics-result",
+  "holidays":                                  "holidays",
+  "co-curricular":                             "co-curricular",
+
+  // ── Admission ─────────────────────────────────────────────────────
+  "admission":                                 "admissionform",
+  "admissionprocess":                          "admissionprocess",
+  "guidelines":                                "guidelines",
+  "enquiry":                                   "enquiry",
+  "admissionform":                             "admissionform",
+
+  // ── Info Corner ───────────────────────────────────────────────────
+  "cbse-affiliation":                          "cbse-affiliation",
+  "affiliation-certificate":                   "affiliation-certificate",
+  "circulars":                                 "circulars",
+  "book-list":                                 "book-list",
+  "reports":                                   "reports",
+  "studentscouncil":                           "studentscouncil",
+  "disclosure":                                "disclosure",
+
+  // ── Calendar ──────────────────────────────────────────────────────
+  "academiccalendar":                          "academiccalendar",
+  "class-wise-strength":                       "class-wise-strength",
+  "table-table":                               "table-table",
+
+  // ── Gallery ───────────────────────────────────────────────────────
+  "images":                                    "images",
+  "videos":                                    "videos",
+  "sportsimages":                              "sportsimages",
+  "sportsvideos":                              "sportsvideos",
+
+  // ── Sports ────────────────────────────────────────────────────────
+  "sports/national-international-participants": "sports-national",
+
+  // ── Other Pages ───────────────────────────────────────────────────
+  "contact":                                   "contact",
+  "social-connect":                            "social-connect",
+  "careers":                                   "careers",
+  "blog":                                      "blog",
+  "virtual-tour":                              "virtual-tour",
+  "student-journey":                           "student-journey",
+  "privacy":                                   "privacy",
+  "terms":                                     "terms",
 };
