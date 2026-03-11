@@ -1,0 +1,66 @@
+// constant/Disclosure/AffiliationData.js
+const affiliationData = [
+  {
+    id: 1,
+    name: "Extension of affiliation certificate     ",
+    file: "/documents/university-affiliation.pdf",
+    issuingAuthority: "University Grants Commission",
+    validUntil: "December 31, 2025",
+    description:
+      "Official recognition of our affiliation with the university system.",
+    fileSize: "2.4 MB",
+    isVerified: true,
+  },
+  {
+    id: 2,
+    name: "Fire Safety Certificate – (Yearly)        ",
+    file: "/documents/accreditation.pdf",
+    issuingAuthority: "National Assessment and Accreditation Council",
+    validUntil: "June 30, 2026",
+    description: "NAAC accreditation with 'A+' grade certification.",
+    fileSize: "1.8 MB",
+    isVerified: true,
+  },
+  {
+    id: 3,
+    name: "Sr. Secondary Affiliation                      ",
+    file: "/documents/industry-partnership.pdf",
+    issuingAuthority: "Ministry of Education",
+    validUntil: "March 31, 2025",
+    description: "Certification of industry-academia partnership program.",
+    fileSize: "1.2 MB",
+    isVerified: true,
+  },
+  //   {
+  //     id: 4,
+  //     name: "ISO Certification",
+  //     file: "/documents/iso-certificate.pdf",
+  //     issuingAuthority: "International Organization for Standardization",
+  //     validUntil: "September 30, 2026",
+  //     description: "ISO 9001:2015 Quality Management System Certification.",
+  //     fileSize: "3.1 MB",
+  //     isVerified: true,
+  //   },
+  //   {
+  //     id: 5,
+  //     name: "Government Recognition",
+  //     file: "/documents/government-recognition.pdf",
+  //     issuingAuthority: "Department of Higher Education",
+  //     validUntil: "December 31, 2027",
+  //     description: "Government recognition for educational institution.",
+  //     fileSize: "2.7 MB",
+  //     isVerified: true,
+  //   },
+  //   {
+  //     id: 6,
+  //     name: "Professional Body Membership",
+  //     file: "/documents/professional-membership.pdf",
+  //     issuingAuthority: "Professional Association",
+  //     validUntil: "Ongoing",
+  //     description: "Membership with national professional body.",
+  //     fileSize: "0.9 MB",
+  //     isVerified: true,
+  //   },
+];
+
+export default affiliationData;

@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Urbanist:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "tailwindcss";
+
+* {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Blur when tab inactive (screenshot/tab switch hint) */
+body.hidden-content {
+  filter: blur(8px);
+}
+
+@theme {
+  /* Font families */
+  --font-title: "DM Serif Text", serif;
+  --font-primary: "Urbanist", sans-serif;
+  --font-secondary: "Poppins", sans-serif;
+  --font-sans: "Urbanist", sans-serif;
+
+  
+  
+
+  /* Core Color Palette - Navy Blue Based */
+  /* --color-navy: #194369;
+  --color-navy-50: #f0f7ff;
+  --color-navy-100: #e0effe;
+  --color-navy-200: #bae0fd;
+  --color-navy-300: #7cc8fb;
+  --color-navy-400: #36adf5;
+  --color-navy-500: #0c94e6;
+  --color-navy-600: #0075c4;
+  --color-navy-700: #005d9e;
+  --color-navy-800: #004d83;
+  --color-navy-900: #003f6c;
+  --color-navy-950: #194369; */
+  /* Core Color Palette - #194369 Based */
+--color-navy: #194369;
+--color-navy-50: #f2f7fc;
+--color-navy-100: #e6eff8;
+--color-navy-200: #c7dbf0;
+--color-navy-300: #9bc1e5;
+--color-navy-400: #68a2d7;
+--color-navy-500: #4685c6;
+--color-navy-600: #346cac;
+--color-navy-700: #2c578b;
+--color-navy-800: #294a73;
+--color-navy-900: #263f60;
+--color-navy-950: #194369;
+
+  --color-maroon: #800000;
+  --color-maroon-50: #fff0f0;
+  --color-maroon-100: #ffdddd;
+  --color-maroon-200: #ffc1c1;
+  --color-maroon-300: #ff9595;
+  --color-maroon-400: #ff5a5a;
+  --color-maroon-500: #ff2626;
+  --color-maroon-600: #ed1111;
+  --color-maroon-700: #c80d0d;
+  --color-maroon-800: #a50f0f;
+  --color-maroon-900: #881414;
+  --color-maroon-950: #4b0404;
+
+  --color-gold: #f0c505;
+  --color-gold-50: #fffee7;
+  --color-gold-100: #fffdc1;
+  --color-gold-200: #fff886;
+  --color-gold-300: #ffec41;
+  --color-gold-400: #ffdd0d;
+  --color-gold-500: #f0c505;
+  --color-gold-600: #d09c00;
+  --color-gold-700: #a67104;
+  --color-gold-800: #89580b;
+  --color-gold-900: #744810;
+  --color-gold-950: #442604;
+
+  /* Background Colors */
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f8fafc;
+  --color-bg-tertiary: #f1f5f9;
+  --color-bg-dark: #0f172a;
+
+  /* Text Colors */
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #475569;
+  --color-text-tertiary: #64748b;
+  --color-text-light: #ffffff;
+  --color-text-inverse: #e2e8f0;
+
+  /* Border Colors */
+  --color-border-light: #e2e8f0;
+  --color-border: #cbd5e1;
+  --color-border-dark: #94a3b8;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08),
+    0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.08),
+    0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  --shadow-navy: 0 10px 30px -5px rgba(0, 117, 196, 0.15);
+  --shadow-maroon: 0 10px 30px -5px rgba(237, 17, 17, 0.1);
+
+  /* Animations */
+  --animate-fadeIn: fadeIn 0.3s ease-out;
+  --animate-slideIn: slideIn 0.3s ease-out;
+  --animate-pulse-subtle: pulseSubtle 2s infinite;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes pulseSubtle {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+  }
+}
+
+/* Base Styles */
+* {
+  font-family: "Urbanist", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-secondary);
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Utility Classes */
+.gradient-navy {
+  background: linear-gradient(
+    135deg,
+    var(--color-navy-600),
+    var(--color-navy-800)
+  );
+}
+
+.gradient-maroon {
+  background: linear-gradient(
+    135deg,
+    var(--color-maroon-600),
+    var(--color-maroon-800)
+  );
+}
+
+.gradient-gold {
+  background: linear-gradient(
+    135deg,
+    var(--color-gold-500),
+    var(--color-gold-700)
+  );
+}
+
+.gradient-light {
+  background: linear-gradient(
+    135deg,
+    var(--color-navy-50),
+    var(--color-bg-secondary)
+  );
+}
+
+.text-gradient-navy {
+  background: linear-gradient(
+    135deg,
+    var(--color-navy-600),
+    var(--color-navy-800)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-maroon {
+  background: linear-gradient(
+    135deg,
+    var(--color-maroon-600),
+    var(--color-maroon-800)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Hide scrollbar for slider */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  scrollbar-width: no;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-navy-400);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-navy-500);
+}
+
+::selection {
+  background-color: var(--color-navy-200);
+  color: var(--color-text-primary);
+}
+
+/* Font utility classes */
+.font-title {
+  font-family: "DM Serif Text", serif;
+}
+
+.font-primary {
+  font-family: "Urbanist", sans-serif;
+}
+
+.font-secondary {
+  font-family: "Poppins", sans-serif;
+}
